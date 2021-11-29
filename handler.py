@@ -6,17 +6,13 @@ except ImportError:
 import json
 import pandas as pd
 import numpy as np
-import plotly
-import statsmodels
 
 def hello(event, context):
     body = {
         "message": "Go Serverless v2.0! Your function executed successfully!",
         "input": event,
         "pandas_version": pd.__version__,
-        "numpy_version": np.__version__,
-        "plotly_version": plotly.__version__,
-        "statsmodels_version": statsmodels.__version__
+        "numpy_version": np.__version__
     }
 
     response = {"statusCode": 200, "body": json.dumps(body)}
